@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Store - Login</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>VENTA DE ROPAS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/login.js" defer></script>
 </head>
 <body>
+    <div class="background-container"></div>
     <div class="login-container">
         <div class="login-box">
-            <div class="brand-logo">
-                <h1>Fashion<span>Store</span></h1>
-                <div class="logo-icon"><i class="fas fa-shopping-bag"></i></div>
-            </div>
-            <h2>¡Bienvenido a tu Boutique!</h2>
-            <p class="subtitle">Descubre las últimas tendencias en moda</p>
-            <form id="loginForm">
+            <h1>VENTA DE ROPAS</h1>
+            <h2>Bienvenido</h2>
+            <p class="subtitle">Conecta con tu comunidad</p>
+            
+            <form class="login-form" id="loginForm">
                 <div class="input-group">
-                    <input type="email" id="username" required placeholder="Correo Electrónico">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="admin@test.com" required>
                 </div>
                 <div class="input-group">
-                    <input type="password" id="password" required placeholder="Contraseña">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="••••••" required>
                 </div>
-                <div class="remember-forgot">
-                    <label class="checkbox-container">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Recordarme
-                    </label>
-                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                <div class="remember-me">
+                    <input type="checkbox" id="recordarme">
+                    <label for="recordarme">Recordarme</label>
                 </div>
-                <button type="submit" class="login-btn">INICIAR SESIÓN</button>
-                <div class="register-link">
-                    ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+                
+                <div class="social-login">
+                    <p>O inicia sesión con</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="login-footer">
+                    <a href="#" class="forgot-password">¿No tienes una cuenta? Regístrate</a>
                 </div>
             </form>
         </div>
     </div>
-    <script src="js/script.js"></script>
 </body>
 </html>
