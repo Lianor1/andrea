@@ -61,6 +61,18 @@ body::before {
     color: #ff9ebd;
 }
 
+.logo-icon {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.logo-icon i {
+    font-size: 2em;
+    color: #ff9ebd;
+    text-shadow: 0 0 10px rgba(255, 158, 189, 0.5);
+}
+
 h2 {
     color: #fff;
     font-family: 'Playfair Display', serif;
@@ -82,9 +94,18 @@ h2 {
     margin-bottom: 30px;
 }
 
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2em;
+}
+
 input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 15px 10px 45px;
     font-size: 16px;
     color: #fff;
     border: none;
@@ -93,10 +114,6 @@ input {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     transition: 0.3s;
-}
-
-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
 }
 
 label {
@@ -139,6 +156,11 @@ input:focus ~ .highlight {
     cursor: pointer;
 }
 
+.checkbox-container i {
+    margin-right: 5px;
+    color: #ff9ebd;
+}
+
 .forgot-link {
     color: #ff9ebd;
     text-decoration: none;
@@ -147,6 +169,10 @@ input:focus ~ .highlight {
 
 .forgot-link:hover {
     text-shadow: 0 0 5px #ff9ebd;
+}
+
+.forgot-link i {
+    margin-right: 5px;
 }
 
 .login-btn {
@@ -169,6 +195,49 @@ input:focus ~ .highlight {
     background: rgba(255, 155, 189, 1);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 155, 189, 0.4);
+}
+
+.login-btn i {
+    margin-right: 8px;
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-login p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2em;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.social-icon:hover {
+    background: rgba(255, 158, 189, 0.3);
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .register-link {
@@ -231,79 +300,7 @@ input:focus ~ .highlight {
     }
 }
 
-.logo-icon {
-    text-align: center;
-    margin-top: -10px;
-    margin-bottom: 20px;
-}
-
-.logo-icon i {
-    font-size: 2em;
-    color: #ff9ebd;
-    text-shadow: 0 0 10px rgba(255, 158, 189, 0.5);
-}
-
-.input-icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1.2em;
-}
-
-.input-group input {
-    padding-left: 45px;
-}
-
-.social-login {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.social-login p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 15px;
-    font-size: 0.9em;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1.2em;
-    transition: 0.3s;
-    backdrop-filter: blur(5px);
-}
-
-.social-icon:hover {
-    background: rgba(255, 158, 189, 0.3);
-    transform: translateY(-3px);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-.login-btn i {
-    margin-right: 8px;
-}
-
-.forgot-link i {
-    margin-right: 5px;
-}
-
-.checkbox-container i {
+.checkbox-container input:checked ~ i {
     display: none;
     position: absolute;
     color: #ff9ebd;
