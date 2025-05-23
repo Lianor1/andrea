@@ -1,1 +1,1 @@
-app de venta de ropa basico  html js   aun falta implementar db ,  contiene  login   para iniciar sesion , home par aver los productos.
+app de venta de ropa basico  html js   aun falta implementar db ,  contiene  login   para iniciar sesion , home par aver los productos. modo administrador. para que se pueda encargar de eliminar productos  y agregar productos.
