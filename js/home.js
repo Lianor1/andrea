@@ -33,57 +33,57 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'login.html';
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Slider functionality
-        const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-        let currentSlide = 0;
-    
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-            
-            // Actualizar los indicadores
-            const indicators = document.querySelectorAll('.indicator');
-            indicators.forEach(ind => ind.classList.remove('active'));
-            indicators[index].classList.add('active');
-        }
-    
-        // Función para el siguiente slide
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-    
-        // Auto-avance cada 5 segundos
-        setInterval(nextSlide, 5000);
-    
-        // Manejadores de eventos para los botones
-        prevBtn?.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        });
-    
-        nextBtn?.addEventListener('click', nextSlide);
-    
-        // Manejadores de eventos para los indicadores
-        document.querySelectorAll('.indicator').forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-            });
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.querySelector('.navbar');
+        const mainContent = document.querySelector('.main-content');
+        const swiperContainer = document.querySelector('.swiper-container');
+
+        menuToggle.addEventListener('click', function() {
+            navbar.classList.toggle('active');
+            mainContent.classList.toggle('shifted');
+            swiperContainer.classList.toggle('shifted');
         });
     });
 
-    // Category tabs
-    const tabBtns = document.querySelectorAll('.tab-btn');
+    // Slider functionality
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentSlide = 0;
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            // Aquí puedes agregar la lógica para filtrar productos
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        
+        // Actualizar los indicadores
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach(ind => ind.classList.remove('active'));
+        indicators[index].classList.add('active');
+    }
+
+    // Función para el siguiente slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Auto-avance cada 5 segundos
+    setInterval(nextSlide, 5000);
+
+    // Manejadores de eventos para los botones
+    prevBtn?.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    });
+
+    nextBtn?.addEventListener('click', nextSlide);
+
+    // Manejadores de eventos para los indicadores
+    document.querySelectorAll('.indicator').forEach((indicator, home) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = home;
+            showSlide(currentSlide);
         });
     });
 });
