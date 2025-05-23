@@ -16,53 +16,43 @@ body {
     background-color: var(--bg-color);
 }
 
-/* Navbar Styles modificado  */
+/* Navbar Styles */
 .navbar {
     background-color: var(--primary-color);
     padding: 1rem;
     position: fixed;
-    width: 250px; /* Ancho fijo para el menú lateral */
-    height: 100vh; /* Altura completa de la ventana */
+    width: 100%;
     top: 0;
-    left: 0; /* Posicionamiento a la derecha */
     z-index: 1000;
     display: flex;
-    flex-direction: column; /* Cambio a columna para menú vertical */
-    align-items: flex-start;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-brand {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 2rem;
-    width: 100%;
-    text-align: center;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 .nav-menu {
     display: flex;
-    flex-direction: column; /* Menú vertical */
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;
-}
-
-.nav-menu li {
-    width: 100%;
 }
 
 .nav-menu li a {
     color: white;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    width: 100%;
-    transition: background-color 0.3s;
 }
 
 .nav-menu li a:hover {
@@ -70,16 +60,19 @@ body {
     border-radius: 5px;
 }
 
-/* Ajuste del contenido principal */
-.main-content {
-    margin-right: 250px; /* Mismo ancho que el navbar */
-    padding: 1rem;
+/* Slider Styles */
+.slider-container {
+    margin-top: 60px;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
 }
 
-/* Ajuste del slider */
-.swiper-container {
-    width: calc(100% - 250px); /* Ancho total menos el menú lateral */
-    margin-right: 250px; /* Espacio para el menú lateral */
+.slider {
+    position: relative;
+    height: 100%;
 }
 
 .swiper-container {
