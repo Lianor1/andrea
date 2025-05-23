@@ -24,7 +24,7 @@ body {
     width: 250px; /* Ancho fijo para el menú lateral */
     height: 100vh; /* Altura completa de la ventana */
     top: 0;
-    right: 0; /* Posicionamiento a la derecha */
+    left: 0; /* Posicionamiento a la derecha */
     z-index: 1000;
     display: flex;
     flex-direction: column; /* Cambio a columna para menú vertical */
